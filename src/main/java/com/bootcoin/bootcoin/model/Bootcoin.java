@@ -1,10 +1,5 @@
 package com.bootcoin.bootcoin.model;
 
-import java.util.UUID;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,10 +9,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "bootcoin")
+
 public class Bootcoin {
-  @Id
-  private String id = UUID.randomUUID().toString();
+  private String id;
   private double buy;// tasa de compra
   private double sales;// tasa de venta
   private String number;// dni, cex o pasaporte
